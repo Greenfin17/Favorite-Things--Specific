@@ -13,12 +13,13 @@ namespace Favorite_Things__Specific.MyStuff
         public int Horsepower { get; set; }
         public int Torque { get; set; }
 
-        public ICETruck(string year, string make, string model, long odometer, string transmission, string driveType, int horsepower, int torque)  
+        public ICETruck(string year, string make, string model, long odometer, string transmission, string driveType, int horsepower, int torque) : base(year, make, model, odometer) 
         {
-            Year = year;
+            /* Year = year;
             Make = make;
             Model = model;
             Odometer = odometer;
+            */
             Transmission = transmission;
             DriveType = driveType;
             Horsepower = horsepower;
