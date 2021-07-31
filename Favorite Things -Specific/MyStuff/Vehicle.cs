@@ -16,13 +16,20 @@ namespace Favorite_Things__Specific.MyStuff
 
         protected double _operationCost;
 
-        public abstract void Drive(int miles, double costPerGallon);
     //    public abstract void Repair(double cost);
         public virtual void Repair(double cost)
         {
             Console.WriteLine($"               Reparing the {Make}");
             Console.WriteLine($"               This repair cost {cost,5:F2}\n");
             _operationCost += cost;
+        }
+        public virtual void Status()
+        {
+            string output = $"               {Year } {Make} {Model}\n" +
+                            $"               Odometer: {Odometer}\n" +
+                            $"               Total Operating Cost: ${_operationCost,0:F2}\n";
+
+            Console.WriteLine(output);
         }
 
     }

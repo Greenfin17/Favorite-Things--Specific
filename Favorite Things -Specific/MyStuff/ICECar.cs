@@ -19,7 +19,12 @@ namespace Favorite_Things__Specific.MyStuff
             _operationCost = 0;
         }
 
-        public override void Drive(int miles, double costPerGallon)
+        public ICECar()
+        {
+
+        }
+
+        public void Drive(int miles, double costPerGallon)
         {
             Console.WriteLine($"               Driving the {Make} {miles} miles.\n");
             Odometer += miles;
