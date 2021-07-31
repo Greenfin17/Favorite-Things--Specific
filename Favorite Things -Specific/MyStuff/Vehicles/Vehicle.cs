@@ -13,6 +13,8 @@ namespace Favorite_Things__Specific.MyStuff
         public string Year { get; set; }
         public string Color { get; set; }
         public long Odometer { get; set; }
+        public int Horsepower { get; set; }
+        public int Torque { get; set; }
 
         protected double _operationCost;
 

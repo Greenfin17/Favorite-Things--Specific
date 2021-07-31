@@ -10,10 +10,14 @@ namespace Favorite_Things__Specific.MyStuff
     {
         public string Transmission { get; set; }
         public string DriveType { get; set; }
-        public int Horsepower { get; set; }
-        public int Torque { get; set; }
 
-        public ICETruck(string year, string make, string model, long odometer, string transmission, string driveType, int horsepower, int torque) : base(year, make, model, odometer) 
+        public double BedWidth { get; set; }
+
+        public double BedLength { get; set; }
+
+
+        public ICETruck(string year, string make, string model, long odometer, string transmission, string driveType, int horsepower, int torque, double bedLength,
+                        double bedWidth) : base(year, make, model, odometer) 
         {
             /* Year = year;
             Make = make;
@@ -24,6 +28,8 @@ namespace Favorite_Things__Specific.MyStuff
             DriveType = driveType;
             Horsepower = horsepower;
             Torque = torque;
+            BedWidth = bedWidth;
+            BedLength = bedLength;
         }
 
         public override void Status()
@@ -34,6 +40,8 @@ namespace Favorite_Things__Specific.MyStuff
                             $"               Horsepower: {Horsepower}\n" +
                             $"               Torque: {Torque}\n" +
                             $"               Odometer: {Odometer}\n" +
+                            $"               Bed Length: {BedLength}\n" +
+                            $"               Bed Width: {BedWidth}\n" +
                             $"               Total Operating Cost: ${_operationCost,0:F2}\n";
 
             Console.WriteLine(output);
