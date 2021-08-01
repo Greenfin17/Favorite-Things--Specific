@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Favorite_Things__Specific.MyStuff
+namespace Favorite_Things__Specific.MyStuff.Vehicles
+
 {
     abstract class Vehicle
     {

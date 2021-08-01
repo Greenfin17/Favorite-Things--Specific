@@ -1,6 +1,8 @@
 ﻿using System;
 using Favorite_Things__Specific.MyStuff;
 using Favorite_Things__Specific.MyStuff.Tools;
+using Favorite_Things__Specific.MyStuff.Electronics;
+using Favorite_Things__Specific.MyStuff.Vehicles;
 using System.Collections.Generic;
 
 namespace Favorite_Things__Specific
@@ -57,6 +59,39 @@ namespace Favorite_Things__Specific
             }
             Console.Write('\n');
         }
+
+        static void LoadElectronics(ref List<E_Device> deviceList)
+        {
+
+            Computer Bach = new Computer("DIY", "2017", 850, "Mid-Tower", "Ryzen 7", "16GB", "2TB");
+            Computer Saturn = new Computer("HP", "2016", 450, "Laptop", "Intel i5", "16GB", "1TB");
+            deviceList.Add(Bach);
+            deviceList.Add(Saturn);
+        }
+        static void DisplayElectronics(ref List<E_Device> deviceList)
+        {
+            foreach(var device in deviceList)
+            {
+                device.Display();
+            }
+        }
+
+        static void loadGPS_Devices(ref List<GPS> deviceList)
+        {
+            GPS garmin = new GPS("Garmin", "Nuvi", "2012", 122.50, "2020");
+            GPS magellan = new GPS("Magellin", "RoadMate", "2013", 114.75, "2020");
+            deviceList.Add(garmin);
+            deviceList.Add(magellan);
+        }
+
+        static void DisplayGPS(ref List<GPS> deviceList)
+        {
+            foreach(var device in deviceList)
+            {
+                device.Display();
+                Console.Write('\n');
+            }
+        }
         static void Main(string[] args)
         {
 
@@ -65,10 +100,21 @@ namespace Favorite_Things__Specific
             LoadVehicles(ref vehicleList);
             Console.WriteLine("               My vehicle list:");
             DisplayVehicles(ref vehicleList);
+
             List<HandTool> toolList = new List<HandTool>();
             LoadTools(ref toolList);
             Console.WriteLine("               My tool list:");
             DisplayTools(ref toolList);
+
+            List<E_Device> electronicsList = new List<E_Device>();
+            LoadElectronics(ref electronicsList);
+            Console.WriteLine("               My electronic device list:");
+            DisplayElectronics(ref electronicsList);
+            
+            List<GPS> GPSList = new List<GPS>();
+            loadGPS_Devices(ref GPSList);
+            Console.WriteLine("               My GPS device list:");
+            DisplayGPS(ref GPSList);
         }
     }
 }
