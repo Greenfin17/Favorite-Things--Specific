@@ -40,6 +40,13 @@ namespace Favorite_Things__Specific
             toolList.Add(skCombination);
             toolList.Add(skBox);
 
+            Screwdriver cobaltSlotted1 = new Screwdriver("Cobalt", DriverTip.Slotted, 2.0, "1/4");
+            Screwdriver cobaltPhillips = new Screwdriver("Cobalt", DriverTip.Phillips, 6.0, "#1");
+            Screwdriver wihaTorx = new Screwdriver("Wiha", DriverTip.Torx, 3.5, "T10");
+            toolList.Add(cobaltSlotted1);
+            toolList.Add(cobaltPhillips);
+            toolList.Add(wihaTorx);
+
 
         }
         static void DisplayTools(ref List<HandTool> toolList)
@@ -53,13 +60,15 @@ namespace Favorite_Things__Specific
         static void Main(string[] args)
         {
 
+            Console.WriteLine("\n               My Specific Favorite Things\n");
             List<Vehicle> vehicleList = new List<Vehicle>();
             LoadVehicles(ref vehicleList);
+            Console.WriteLine("               My vehicle list:");
             DisplayVehicles(ref vehicleList);
             List<HandTool> toolList = new List<HandTool>();
             LoadTools(ref toolList);
+            Console.WriteLine("               My tool list:");
             DisplayTools(ref toolList);
-
         }
     }
 }

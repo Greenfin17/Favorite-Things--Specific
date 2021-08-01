@@ -35,7 +35,7 @@ namespace Favorite_Things__Specific.MyStuff
         public override void Status()
         {
             string output = $"               {Year } {Make} {Model}\n" +
-                            $"               Transmission {Transmission}\n" +
+                            $"               Transmission: {Transmission}\n" +
                             $"               Drive: {DriveType}\n" +
                             $"               Horsepower: {Horsepower}\n" +
                             $"               Torque: {Torque}\n" +

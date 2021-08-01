@@ -25,4 +25,12 @@ namespace Favorite_Things__Specific.MyStuff
         Ratcheting,
         Adjustable
     }
+
+    enum DriverTip
+    {
+        Slotted,
+        Phillips,
+        Torx,
+        Hex
+    }
 }
